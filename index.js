@@ -7,8 +7,9 @@ var bodyParser = require("body-parser");
 var expressErrorHandler = require("express-error-handler");
 var expressSession = require("express-session");
 var app = express();
+require('dotenv').config();
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT);
 app.set("views", "./views");
 app.engine('html', require('ejs').renderFile);
 app.set("view engine", "html");
